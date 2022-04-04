@@ -2,7 +2,7 @@ package com.kreitek.pets.utils;
 
 public class Logger {
     private static Logger instance;
-    private int count;
+    private int countDebug;
 
     private Logger() { }
 
@@ -14,7 +14,8 @@ public class Logger {
     }
 
     public void debug(String message){
-        count+=1;
-        System.out.println("[debug][" + count +"] " + message);
+        countDebug++;
+        System.out.printf("[debug][%d] %s \n", countDebug, message);
+
     }
 }
